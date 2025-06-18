@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carteles Antón Bernabé</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .promo-box {
+      border: 2px solid #f04e23;
+      background-color: #fff3f0;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    .promo-box h3 {
+      margin-top: 0;
+      color: #c8370d;
+    }
+    .promo-box p {
+      margin-bottom: 0.5rem;
+    }
+    .promo-destacado {
+      font-weight: bold;
+      color: #c8370d;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
@@ -24,7 +61,17 @@
     <section id="inicio">
       <h1>Carteles Antón Bernabé</h1>
       <p>Distribución física y digital de cartelería publicitaria para todo tipo de campañas, eventos, espectáculos y más.</p>
-      <img src="img/oferta.png" alt="Oferta Promocional" style="max-width: 100%; height: auto; margin-top: 20px;" />
+
+      <div class="promo-box">
+        <h3>🎯 Promoción limitada</h3>
+        <p><span class="promo-destacado">100 carteles 70x100 cm</span>, impresos y distribuidos en zonas clave:</p>
+        <ul>
+          <li>100 en la ciudad del evento</li>
+          <li>O 50 ciudad evento + 50 ciudad vecina</li>
+        </ul>
+        <p class="promo-destacado">Precio cerrado: 250€</p>
+        <p>Contacta con nosotros para más detalles.</p>
+      </div>
     </section>
 
     <section id="servicios">
@@ -53,6 +100,16 @@
         <li>Vallès Oriental</li>
         <li>Barcelonès y alrededores</li>
       </ul>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería de trabajos</h2>
+      <div class="galeria">
+        <img src="img/galeria/foto1.png" alt="Ejemplo de cartel 1">
+        <img src="img/galeria/foto2.png" alt="Ejemplo de cartel 2">
+        <img src="img/galeria/foto3.png" alt="Ejemplo de cartel 3">
+        <img src="img/galeria/foto4.png" alt="Ejemplo de cartel 4">
+      </div>
     </section>
 
     <section id="contacto">
