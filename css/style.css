@@ -17,6 +17,7 @@ body {
 /* Header */
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #222;
@@ -34,16 +35,19 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #f04e23;
 }
 
 /* Secciones */
@@ -84,4 +88,62 @@ footer {
   background-color: #222;
   color: #fff;
   border-radius: 10px;
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Caja Promoción */
+.promo-box {
+  border: 2px solid #f04e23;
+  background-color: #fff3f0;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.promo-box h3 {
+  margin-top: 0;
+  color: #c8370d;
+}
+
+.promo-box p {
+  margin-bottom: 0.5rem;
+}
+
+.promo-destacado {
+  font-weight: bold;
+  color: #c8370d;
+}
+
+/* Responsive mejora */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
 }
