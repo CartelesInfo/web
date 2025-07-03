@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Fuente base */
+/* Fuente base y fondo */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
   color: #222;
   padding: 20px;
 }
@@ -23,8 +23,9 @@ header {
   background-color: #222;
   padding: 15px 20px;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .logo {
@@ -41,13 +42,14 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  color: #f04e23;
+  background-color: #f04e23;
 }
 
 /* Secciones */
@@ -56,21 +58,25 @@ main section {
 }
 
 main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #f04e23;
 }
 
 main h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #444;
+  color: #333;
+  border-bottom: 2px solid #f04e23;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 main h3 {
   font-size: 1.4rem;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #666;
+  color: #555;
 }
 
 p, ul {
@@ -88,6 +94,8 @@ footer {
   background-color: #222;
   color: #fff;
   border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Galería */
@@ -102,7 +110,7 @@ footer {
 .galeria img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
 
@@ -112,17 +120,19 @@ footer {
 
 /* Caja Promoción */
 .promo-box {
-  border: 2px solid #f04e23;
-  background-color: #fff3f0;
-  padding: 1rem;
+  border: 2px dashed #f04e23;
+  background-color: #fff0eb;
+  padding: 1rem 1.5rem;
   margin-top: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   max-width: 600px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .promo-box h3 {
   margin-top: 0;
   color: #c8370d;
+  font-size: 1.5rem;
 }
 
 .promo-box p {
@@ -131,7 +141,7 @@ footer {
 
 .promo-destacado {
   font-weight: bold;
-  color: #c8370d;
+  color: #b7320a;
 }
 
 /* Responsive mejora */
@@ -145,5 +155,9 @@ footer {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+  }
+
+  .promo-box {
+    padding: 1rem;
   }
 }
